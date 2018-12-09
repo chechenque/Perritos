@@ -75,8 +75,8 @@ public class SemillaCompletaFragment extends Fragment {
                             JSONObject jsonObject = new JSONObject(response.body().get("message").toString());
                             JSONArray jsonArray = jsonObject.getJSONArray("sheepdog");
 
-                            listaPerritos.add(new Perrito(jsonArray.get(0).toString(), "https://images.dog.ceo/breeds/sheepdog-english/n02105641_1045.jpg"));
-                            listaPerritos.add(new Perrito(jsonArray.get(1).toString(), "https://images.dog.ceo/breeds/sheepdog-shetland/n02105855_10095.jpg"));
+                            listaPerritos.add(new Perrito("sheepdog " + jsonArray.get(0).toString(), "https://images.dog.ceo/breeds/sheepdog-english/n02105641_1045.jpg"));
+                            listaPerritos.add(new Perrito("sheepdog " + jsonArray.get(1).toString(), "https://images.dog.ceo/breeds/sheepdog-shetland/n02105855_10095.jpg"));
 
                             PerritosAdapter perritosAdapter = new PerritosAdapter(getActivity(), listaPerritos);
 
